@@ -1,9 +1,9 @@
 object Enums {
   def start() = {
     println(Color.Red.rgb)
-    println(Color.enumValue(1))
-    println(Color.enumValueNamed("Blue"))
-    println(Color.enumValues)
+//    println(Color.enumValue(1))
+    println(Color.valueOf("Blue"))
+    println(Color.values)
 
     Planet.weight(71.0)
 
@@ -35,7 +35,7 @@ enum Planet(mass: Double, radius: Double) {
 object Planet {
   def weight(earthWeight: Double) = {
     val mass = earthWeight/EARTH.surfaceGravity
-    for (p <- enumValues)
+    for (p <- values)
       println(s"Your weight on $p is ${p.surfaceWeight(mass)}")
   }
 }

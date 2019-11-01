@@ -1,16 +1,16 @@
 object Types {
-	def start():String = {
-		val msg = "start new types"
-		println(msg)
+  def start(): String = {
+    val msg = "start new types"
+    println(msg)
     hoge(A(1))
     hoge(B(2))
     println(hoge2().getClass)
     fuga(new E())
-		msg
-	}
+    msg
+  }
 
-	case class A( x: Int) {}
-	case class B( x: Int) {}
+  case class A(x: Int) {}
+  case class B(x: Int) {}
   trait C {
     def hoge() = "hoge"
   }
